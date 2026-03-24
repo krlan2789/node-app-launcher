@@ -6,7 +6,8 @@
     "node-app-launcher": "index.js"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "templates"
   ],
   "keywords": [],
   "author": "krlan2789",
