@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "bin": {
-    "lan-app-launcher": "index.js"
+    "node-app-launcher": "index.js"
   },
   "files": [
     "index.js"
