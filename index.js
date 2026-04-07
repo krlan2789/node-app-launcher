@@ -6,6 +6,7 @@ import { blue, cyan, green, bold, red } from 'kolorist';
 import path from 'path';
 import createExpressRabbitMQProject from './templates/express-rabbitmq/command.js';
 import createExpressPrismaProject from './templates/express-prisma/command.js';
+import createNuxtPrimeTailwindFromGithub from './templates/nuxt-prime-tailwind/command.js';
 
 async function init() {
     console.log(bold(cyan('\n🛠  LAN Project Launcher (Bun Edition)\n')));
@@ -46,6 +47,10 @@ async function init() {
                     title: 'Express + RabbitMQ',
                     value: { type: 'custom', id: 'express-amq' }
                 },
+                {
+                    title: 'Nuxt 4 + PrimeVue 4 + Tailwind 4',
+                    value: { type: 'custom', id: 'nuxt-prime-tailwind' }
+                },
             ],
         }
     ]);
@@ -80,6 +85,9 @@ async function init() {
                 break;
             case 'express-prisma':
                 await createExpressPrismaProject(projectName, targetDir);
+                break;
+            case 'nuxt-prime-tailwind':
+                await createNuxtPrimeTailwindFromGithub(projectName, targetDir);
                 break;
         }
     }

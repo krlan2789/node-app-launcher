@@ -15,6 +15,7 @@
   "dependencies": {
     "cross-spawn": "^7.0.6",
     "fs-extra": "^11.1.1",
+    "giget": "^3.2.0",
     "kolorist": "^1.8.0",
     "ora": "^9.3.0",
     "prompts": "^2.4.2"
