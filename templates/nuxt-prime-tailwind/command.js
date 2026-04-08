@@ -3,6 +3,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import ora from 'ora';
 import { cyan, yellow, green, blue, red } from 'kolorist';
+import runCommand from '../common/runCommand.js';
 
 export default async function createNuxtPrimeTailwindFromGithub(projectName, targetDir) {
     try {
@@ -36,7 +37,7 @@ export default async function createNuxtPrimeTailwindFromGithub(projectName, tar
         console.log(`  cd ${projectName}`);
         console.log(`  bun dev`);
     } catch (err) {
-        spinner.fail(red('Failed to download template.'));
+        const spinner = ora().fail(red('Failed to download template.'));
         console.error(red('\n❌ Error:'), err.message);
     }
 }
