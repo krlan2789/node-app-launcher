@@ -40,6 +40,10 @@ async function init() {
                     value: { type: 'spawn', command: 'npx', args: ['@nestjs/cli', 'new'] }
                 },
                 {
+                    title: 'ElysiaJS CLI (Bun)',
+                    value: { type: 'spawn', command: 'bun', args: ['create', 'elysia'] }
+                },
+                {
                     title: 'Express + Prisma ORM (SQLite)',
                     value: { type: 'custom', id: 'express-prisma' }
                 },
