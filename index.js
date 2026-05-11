@@ -7,6 +7,7 @@ import path from 'path';
 import createExpressRabbitMQProject from './templates/express-rabbitmq/command.js';
 import createExpressPrismaProject from './templates/express-prisma/command.js';
 import createNuxtPrimeTailwindFromGithub from './templates/nuxt-prime-tailwind/command.js';
+import createTurborepoElysiaNuxtFromGithub from './templates/turborepo-elysia-nuxt/command.js';
 
 async function init() {
     console.log(bold(cyan('\n🛠  LAN Project Launcher (Bun Edition)\n')));
@@ -55,6 +56,10 @@ async function init() {
                     title: 'Nuxt 4 + PrimeVue 4 + Tailwind 4',
                     value: { type: 'custom', id: 'nuxt-prime-tailwind' }
                 },
+                {
+                    title: 'TEN (Turborepo + Elysia + Nuxt)',
+                    value: { type: 'custom', id: 'turborepo-elysia-nuxt' }
+                },
             ],
         }
     ]);
@@ -92,6 +97,9 @@ async function init() {
                 break;
             case 'nuxt-prime-tailwind':
                 await createNuxtPrimeTailwindFromGithub(projectName, targetDir);
+                break;
+            case 'turborepo-elysia-nuxt':
+                await createTurborepoElysiaNuxtFromGithub(projectName, targetDir);
                 break;
         }
     }
