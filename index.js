@@ -8,6 +8,7 @@ import createExpressRabbitMQProject from './templates/express-rabbitmq/command.j
 import createExpressPrismaProject from './templates/express-prisma/command.js';
 import createNuxtPrimeTailwindFromGithub from './templates/nuxt-prime-tailwind/command.js';
 import createTurborepoElysiaNuxtFromGithub from './templates/turborepo-elysia-nuxt/command.js';
+import createTurborepoGinNuxtFromGithub from './templates/turborepo-gin-nuxt/command.js';
 
 async function init() {
     console.log(bold(cyan('\n🛠  LAN Project Launcher (Bun Edition)\n')));
@@ -60,6 +61,10 @@ async function init() {
                     title: 'TEN (Turborepo + Elysia + Nuxt)',
                     value: { type: 'custom', id: 'turborepo-elysia-nuxt' }
                 },
+                {
+                    title: 'TGN (Turborepo + Gin + Nuxt)',
+                    value: { type: 'custom', id: 'turborepo-gin-nuxt' }
+                },
             ],
         }
     ]);
@@ -100,6 +105,9 @@ async function init() {
                 break;
             case 'turborepo-elysia-nuxt':
                 await createTurborepoElysiaNuxtFromGithub(projectName, targetDir);
+                break;
+            case 'turborepo-gin-nuxt':
+                await createTurborepoGinNuxtFromGithub(projectName, targetDir);
                 break;
         }
     }
