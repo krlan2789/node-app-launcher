@@ -42,6 +42,10 @@ async function init() {
                     value: { type: 'spawn', command: 'npx', args: ['@nestjs/cli', 'new'] }
                 },
                 {
+                    title: 'SvelteKit CLI (NPM)',
+                    value: { type: 'spawn', command: 'npx', args: ['sv', 'create'] }
+                },
+                {
                     title: 'ElysiaJS CLI (Bun)',
                     value: { type: 'spawn', command: 'bun', args: ['create', 'elysia'] }
                 },
